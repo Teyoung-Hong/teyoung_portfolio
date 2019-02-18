@@ -1,0 +1,59 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="keywords" content=",,,">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Teyoung Hong</title>
+  <!-- BootstrapのCSS読み込み -->
+  <link href="{% static "common/bootstrap.min.css" %}" rel="stylesheet">
+  <link href="{% static "css/base.css" %}" rel="stylesheet">
+  <link href="{% static "css/main.css" %}" rel="stylesheet">
+  <!-- jQuery読み込み -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <!-- BootstrapのJS読み込み -->
+  <script src="{% static "common/bootstrap.min.js" %}"></script>
+</head>
+<body>
+  <div class="container-fluid header_box" style="background-image:url({% static 'post/icon_ny1.png' %})">
+  <div class="row header_back b_b">
+    <div class="col-lg-2"></div>
+    <div class="col-lg-8 header_h">
+      <h1>Teyoung Hong</h1>
+      <div class="header_h-sub">A Korean Born in Japan.</div>
+    </div>
+    <div class="col-lg-2"></div>
+  </div>
+</div>
+<div class="main_box">
+  {% for a in all %}
+    {% if a.section == 'skills' %}
+    <div class="section {{ s_p.section }}">{{ s_p.section }}
+      {% if s_p %}
+      <div class="genre {{ s_p.genre }}">{{ s_p.genre }}
+        {% for p in s_p %}
+          <div class="small_box">
+	    <div class="title {{ p.title }}">{{ p.title }}</div>
+	    <div class="desc {{ p.desc }}">{{ p.desc }}</div>
+          </div>
+        </div>
+        {% endfor %}
+      {% elif s_l %}
+      <div class="genre {{ l.genre }}">{{ l.genre }}
+        {% for l in s_l %}
+          <div class="small_box">
+	    <div class="title {{ l.title }}">{{ l.title }}</div>
+	    <div class="desc {{ l.desc }}">{{ l.desc }}</div>
+          </div>
+        </div>
+	{% endfor %}
+      {% endif %}
+    </div>
+    {% endif %}
+  {% endfor %}
+</div>
+</body>
+</html>
