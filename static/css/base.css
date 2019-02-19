@@ -52,6 +52,10 @@ footer{
 display:none;
 }
 
+.selected{
+  color:#06081B;
+}
+
 /* background-colors */
 .b_b{
 background-color:rgba(0,0,0,0.6);
