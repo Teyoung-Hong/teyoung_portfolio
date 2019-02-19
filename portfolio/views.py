@@ -9,8 +9,8 @@ class MainView(TemplateView):
         context = super().get_context_data(**kwargs)
         context = {
           'all' : Post.objects.all(),
-          's_p' : Post.objects.filter(section='skills').filter(genre="programming"),
-          's_l' : Post.objects.filter(section='skills').filter(genre='languages'),
-          'work' : Post.objects.filter(section='works')
+          's_p' : Post.objects.filter(genre='programming'),
+          's_l' : Post.objects.filter(genre='language'),
+          'work' : Post.objects.filter(section='works'),
         }
         return context

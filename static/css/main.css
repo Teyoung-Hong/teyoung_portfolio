@@ -24,4 +24,50 @@ h1{
   padding:0.1rem 1rem;
 }
 
+.section{
+  margin:0 auto;
+}
+
+.section_name{
+  text-align:center;
+  font-size:4rem;
+  font-weight:300;
+  margin:3rem auto;
+}
+
+.genre{
+  margin:0 auto;
+  width:80%;
+  text-align:center;
+}
+
+.small_box{
+  display:inline-block;
+  width:45%;
+  margin-bottom:5rem;
+}
+
+.genre_name{
+  font-size:2rem;
+  border-bottom:solid #626973 0.1rem;
+  text-align:center;
+}
+
+.title{
+  font-size:2rem;
+  margin:1rem auto;
+  text-align: center;
+}
+
+.desc{
+  font-size:1.2rem;
+  width:90%;
+  margin:0 auto;
+}
+
+
+
+
+
+
 

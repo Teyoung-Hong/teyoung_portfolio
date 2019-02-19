@@ -10,7 +10,7 @@ class Post(models.Model):
     )
 
     GENRE_CHOICES = (
-      ('laguages','languages'),
+      ('language','language'),
       ('programming','programming'),
       ('else','else'),
     )

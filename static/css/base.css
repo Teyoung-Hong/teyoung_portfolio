@@ -8,6 +8,11 @@ html{
 font-size:10px;
 }
 
+body{
+color:#626973;
+background-color:#F1F1F2;
+}
+
 a{
 text-decoration:none;
 color:#626973;
@@ -32,6 +37,15 @@ input, button, textarea, select {
 h3{
 font-size:50px;
 margin:50px auto;
+}
+
+footer{
+  height:20rem;
+  text-align:center;
+  background-color:#06081B;
+  color:#FCF5DB;
+  font-size:2.5rem;
+  line-height:20rem;
 }
 
 .is_active{

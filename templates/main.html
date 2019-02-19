@@ -16,44 +16,65 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   <!-- BootstrapのJS読み込み -->
   <script src="{% static "common/bootstrap.min.js" %}"></script>
+  <script src="{% static "js/main.js" %}"></script>
 </head>
 <body>
   <div class="container-fluid header_box" style="background-image:url({% static 'post/icon_ny1.png' %})">
-  <div class="row header_back b_b">
+  <div class="row header_back b_b" id="bb">
     <div class="col-lg-2"></div>
     <div class="col-lg-8 header_h">
-      <h1>Teyoung Hong</h1>
+      <h1 id="head_word">Teyoung Hong</h1>
       <div class="header_h-sub">A Korean Born in Japan.</div>
     </div>
     <div class="col-lg-2"></div>
   </div>
 </div>
 <div class="main_box">
-  {% for a in all %}
-    {% if a.section == 'skills' %}
-    <div class="section {{ s_p.section }}">{{ s_p.section }}
-      {% if s_p %}
-      <div class="genre {{ s_p.genre }}">{{ s_p.genre }}
-        {% for p in s_p %}
-          <div class="small_box">
-	    <div class="title {{ p.title }}">{{ p.title }}</div>
-	    <div class="desc {{ p.desc }}">{{ p.desc }}</div>
-          </div>
+    <div class="section skills">
+      <p id="skills" class="section_name">skills</p>
+      <div id="genre" class="genre programming is_active">
+	<p class="genre_name">Programming</p>
+	{% for p in s_p %}
+        <div class="small_box">
+	  <div class="title {{ p.title }}">{{ p.title }}</div>
+	  <div class="desc">{{ p.desc }}</div>
         </div>
-        {% endfor %}
-      {% elif s_l %}
-      <div class="genre {{ l.genre }}">{{ l.genre }}
+	{% endfor %}<!-- for p in s_p -->
+      </div>
+      <div id="genre2" class="genre languages is_active">
+	<p class="genre_name">Languages</p>
         {% for l in s_l %}
-          <div class="small_box">
-	    <div class="title {{ l.title }}">{{ l.title }}</div>
-	    <div class="desc {{ l.desc }}">{{ l.desc }}</div>
-          </div>
+        <div class="small_box">
+	  <div class="title {{ l.title }}">{{ l.title }}</div>
+	  <div class="desc">{{ l.desc }}</div>
         </div>
-	{% endfor %}
-      {% endif %}
+	{% endfor %}<!-- for l in s_l -->
+      </div>
     </div>
-    {% endif %}
-  {% endfor %}
+    <div  class="section work">
+       <p id="work" class="section_name">work</p>
+       <div id="work_item" class="genre is_active">
+         <p class="genre_name">Programming</p>
+         {% for p in s_p %}
+         <div class="small_box">
+           <div class="title {{ p.title }}">{{ p.title }}</div>
+           <div class="desc">{{ p.desc }}</div>
+         </div>
+         {% endfor %}<!-- for p in s_p -->
+       </div>
+       <div class="genre languages is_active">
+         <p class="genre_name">Languages</p>
+         {% for l in s_l %}
+         <div class="small_box">
+           <div class="title {{ l.title }}">{{ l.title }}</div>
+           <div class="desc">{{ l.desc }}</div>
+         </div>
+         {% endfor %}<!-- for l in s_l -->
+       </div>
+     </div>
 </div>
+<footer>
+  This website is made by Teyoung Hong.
+</footer>
 </body>
 </html>
