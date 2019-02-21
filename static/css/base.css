@@ -40,12 +40,12 @@ margin:50px auto;
 }
 
 footer{
-  height:20rem;
+  height:20vh;
   text-align:center;
   background-color:#06081B;
   color:#FCF5DB;
-  font-size:2.5rem;
-  line-height:20rem;
+  font-size:2vh;
+  line-height:20vh;
 }
 
 .is_active{

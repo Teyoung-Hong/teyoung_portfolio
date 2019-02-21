@@ -68,3 +68,13 @@ h1{
 #work_item{
   font-size:2rem;
 }
+
+@media screen and (min-width:480px) {
+  .h1 {
+    font-size:7rem;
+  }
+
+  .header_h-sub{
+    font-size:2rem;
+  }
+}
