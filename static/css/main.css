@@ -27,8 +27,8 @@ h1{
 .header_sns ul {
   display:flex;
   padding:0;
-  justfy-content:center;
-  margin-top;1vh;
+  justify-content:center;
+  margin-top:3vh;
 }
 
 .icon_sns{
