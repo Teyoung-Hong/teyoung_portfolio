@@ -24,6 +24,20 @@ h1{
   padding:0.1rem 1rem;
 }
 
+.header_sns ul {
+  display:flex;
+  padding:0;
+  justfy-content:center;
+  margin-top;1vh;
+}
+
+.icon_sns{
+  border-radius:50%;
+  height:2.5rem;
+  width:2.5rem;
+  margin:0 10px;
+}
+
 .section{
   margin:0 auto;
 }
