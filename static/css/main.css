@@ -1,114 +1,116 @@
-.header_box{
-  height:100vh;
-  background-size:cover;
-  background-position:center;
+.header_box {
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
 }
 
-.header_h{
-  color:#FCF5DB;
-  margin:35vh auto;
-  text-align:center;
-  height:30vh;
+.header_h {
+    color: #FCF5DB;
+    margin: 35vh auto;
+    text-align: center;
+    height: 30vh;
 }
 
-h1{
-  font-size:10rem;
-  margin-bottom:2rem;
+h1 {
+    font-size: 10rem;
+    margin-bottom: 2rem;
 }
 
-.header_h-sub{
-  font-size:4rem;
-  border:solid 0.3rem #FCF5DB;
-  width:fit-content;
-  margin:0 auto;
-  padding:0.1rem 1rem;
+.header_h-sub {
+    font-size: 4rem;
+    border: solid 0.3rem #FCF5DB;
+    width: fit-content;
+    margin: 0 auto;
+    padding: 0.1rem 1rem;
 }
 
-.header_sns{
-margin-top:5vh;
+.header_sns {
+    margin-top: 5vh;
 }
 
 .header_sns ul {
-  display:flex;
-  padding:0;
-  justify-content:center;
+    display: flex;
+    padding: 0;
+    justify-content: center;
 }
 
-.icon_sns{
-  border-radius:50%;
-  height:2.5rem;
-  width:2.5rem;
-  margin:0 10px;
-  opacity:0.8;
+.icon_sns {
+    border-radius: 50%;
+    height: 2.5rem;
+    width: 2.5rem;
+    margin: 0 10px;
+    opacity: 0.8;
 }
 
-.section{
-  margin:0 auto;
+.section {
+    margin: 0 auto;
 }
 
-.section_name{
-  text-align:center;
-  font-size:4rem;
-  font-weight:300;
-  margin:3rem auto;
+.section_name {
+    text-align: center;
+    font-size: 4rem;
+    font-weight: 300;
+    margin: 3rem auto;
 }
 
-.genre{
-  margin:0 auto;
-  width:80%;
-  text-align:center;
+.genre {
+    margin: 0 auto;
+    width: 80%;
+    text-align: center;
 }
 
-.small_box{
-  display:inline-block;
-  width:45%;
-  margin-bottom:5rem;
+.small_box {
+    display: inline-block;
+    width: 45%;
+    margin-bottom: 5rem;
 }
 
-.genre_name{
-  font-size:2rem;
-  border-bottom:solid #626973 0.1rem;
-  text-align:center;
+.genre_name {
+    font-size: 2rem;
+    border-bottom: solid #626973 0.1rem;
+    text-align: center;
 }
 
-.title{
-  font-size:2rem;
-  margin:1rem auto;
-  text-align: center;
+.title {
+    font-size: 2rem;
+    margin: 1rem auto;
+    text-align: center;
 }
 
-.desc{
-  font-size:1.2rem;
-  width:90%;
-  margin:0 auto;
+.desc {
+    font-size: 1.2rem;
+    width: 90%;
+    margin: 0 auto;
 }
 
-#work_item{
-  font-size:2rem;
+#work_item {
+    font-size: 2rem;
 }
 
 @media screen and (max-width:480px) {
-  html{font-size:10px;}
+    html {
+        font-size: 10px;
+    }
 
-  h1 {
-    font-size:7rem;
-  }
+    h1 {
+        font-size: 7rem;
+    }
 
-  .header_h-sub{
-    font-size:2rem;
-  }
+    .header_h-sub {
+        font-size: 2rem;
+    }
 
-  .genre_name{
-    font-size:2.5rem;
-  }
+    .genre_name {
+        font-size: 2.5rem;
+    }
 
-  .small_box{
-    display:block;
-    width:90%;
-    margin:3rem auto;
-  }
+    .small_box {
+        display: block;
+        width: 90%;
+        margin: 3rem auto;
+    }
 
-  .title{
-    font-size:1.8rem;
-  }
+    .title {
+        font-size: 1.8rem;
+    }
 }

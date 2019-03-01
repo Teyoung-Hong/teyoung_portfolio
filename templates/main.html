@@ -21,8 +21,16 @@
   <link href="{% static "common/bootstrap.min.css" %}" rel="stylesheet">
   <link href="{% static "css/base.css" %}" rel="stylesheet">
   <link href="{% static "css/main.css" %}" rel="stylesheet">
+  <!-- animated,cssの読み込み -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css" rel="stylesheet"></link>
   <!-- jQuery読み込み -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <!-- scroolify読み込み -->
+  <script src="https://cdn.jsdelivr.net/npm/jquery-scrollify@1/jquery.scrollify.min.js"></script>
+  <!-- inview.js読み込み -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inview/1.0.0/jquery.inview.min.js"></script>
+  <!-- textillate.jsの読み込み -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/textillate/0.4.0/jquery.textillate.min.js"></script>
   <!-- BootstrapのJS読み込み -->
   <script src="{% static "common/bootstrap.min.js" %}"></script>
   <script src="{% static "js/main.js" %}"></script>
@@ -34,7 +42,7 @@
       <h1 id="head_word">Teyoung Hong</h1>
       <div class="header_h-sub">A Korean Born in Japan.</div>
       <div class="header_sns">
-        <ul>
+        <ul class="animated hingle">
 	  <li class="box_icon_sns"><a href="https://www.facebook.com/steve.hong.1612"><img src="{% static 'post/icon_facebook.png' %}" alt="Teyoung Hong" class="icon_sns"></a></li>
 	  <li class="box_icon_sns"><a href="https://www.instagram.com/teyounghong/"><img src="{% static 'post/icon_instagram.png' %}" alt="Teyoung Hong" class="icon_sns"></a></li>
 	  <li class="box_icon_sns"><a href="#"><img src="{% static 'post/icon_gmail.png' %}" alt="Teyoung Hong" class="icon_sns"></a></li>
