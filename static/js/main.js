@@ -15,7 +15,7 @@ $('#work').on('click', function(){
   $('#work_item').toggle(500);
 });
 
-$('要素').on('inview', function() {
+$('.header_box').on('inview', function() {
   $('#head_word').textillate({
     minDisplayTime: 3000,
     initialDelay: 1000,
