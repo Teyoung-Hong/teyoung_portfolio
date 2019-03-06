@@ -44,6 +44,8 @@ h1 {
 
 .section {
     margin: 0 auto;
+    height:100vh;
+    width:100%;
 }
 
 .section_name {
@@ -51,6 +53,7 @@ h1 {
     font-size: 4rem;
     font-weight: 300;
     margin: 3rem auto;
+    padding-top:2rem;
 }
 
 .genre {
@@ -85,6 +88,14 @@ h1 {
 
 #work_item {
     font-size: 2rem;
+}
+
+.form_box{
+  padding: 0 20vw;  
+}
+
+form{
+  margin-top:15vh;  
 }
 
 @media screen and (max-width:480px) {

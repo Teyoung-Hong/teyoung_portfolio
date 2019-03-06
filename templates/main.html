@@ -30,14 +30,12 @@
   <!-- inview.js読み込み -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inview/1.0.0/jquery.inview.min.js"></script>
   <!-- textillate.jsの読み込み -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/textillate/0.4.0/jquery.textillate.min.js"></script>
-  <script src="https://www.vusive.com/v2/plugins/textillate/jquery.lettering.js"></script>
   <!-- BootstrapのJS読み込み -->
   <script src="{% static "common/bootstrap.min.js" %}"></script>
   <script src="{% static "js/main.js" %}"></script>
 </head>
 <body>
-<div class="container-fluid header_box" style="background-image:url({% static 'post/icon_ny1.png' %})">
+<div class="section container-fluid header_box" style="background-image:url({% static 'post/icon_ny1.png' %})">
   <div class="row header_back b_b" id="bb">
     <div class="col-lg-8 header_h">
       <h1 id="head_word">Teyoung Hong</h1>
@@ -58,7 +56,7 @@
 <div class="main_box">
     <div class="section skills">
       <p id="skills" class="section_name">skills</p>
-      <div id="genre" class="genre programming is_active">
+      <div id="genre" class="genre programming">
 	<p class="genre_name">Programming</p>
 	{% for p in s_p %}
         <div class="small_box">
@@ -67,7 +65,7 @@
         </div>
 	{% endfor %}<!-- for p in s_p -->
       </div>
-      <div id="genre2" class="genre languages is_active">
+      <div id="genre2" class="genre languages">
 	<p class="genre_name">Languages</p>
         {% for l in s_l %}
         <div class="small_box">
@@ -77,11 +75,21 @@
 	{% endfor %}<!-- for l in s_l -->
       </div>
     </div>
-    <div  class="section work">
+    <div class="section work">
       <p id="work" class="section_name">work</p>
-      <div id="work_item" class="is_active  genre">
+      <div id="work_item" class="genre">
         Coming soon...
       </div>
+    </div>
+    <div class="form_box section">
+      <div class="form_title section_name">Contact</div>
+      <form action="" method="post">
+      {% csrf_token %}
+        <table>
+          {{ form.as_p }}
+        </table>
+        <input type="submit" value="送信">
+      </form>
     </div>
 </div>
 <footer>
