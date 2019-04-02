@@ -23,3 +23,12 @@ class Post(models.Model):
 
     def __str__(self):
       return self.title
+
+
+class Contact(models.Model):
+    name = models.CharField("氏名", max_length=50)
+    email = models.EmailField(max_length=200)
+    message = models.CharField("本文", max_length=5000)
+
+    def __str__(self):
+        return '%s sent message %s' % (self.name, self.message)

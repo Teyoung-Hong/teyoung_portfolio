@@ -4,8 +4,43 @@ from django.conf import settings
 
 class ContactForm(forms.Form):
     
-    name = forms.CharField(label='お名前', required=True, widget=forms.TextInput(attrs={'class': 'form-control reset-border-radius',}))
-    message = forms.CharField(label='お問い合わせ内容', widget=forms.Textarea(attrs={'placeholder':'メールアドレスも併せてご記入お願い致します。', 'class': 'form-control reset-border-radius',}), required=True)
+    name = forms.CharField(
+      label='氏名',
+      max_length=50,
+      required=True, 
+      widget=forms.TextInput(
+        attrs={
+          'class': 'form-control reset-border-radius',
+          'placeholder': '例）胃二 絵酢太',
+          'name': 'name'
+          }
+      )
+    )
+
+    message = forms.CharField(
+      label='お問い合わせ内容', 
+      max_length=5000,
+      widget=forms.Textarea(
+        attrs={
+          'placeholder':'メールアドレスも併せてご記入お願い致します。',
+          'class': 'form-control reset-border-radius',
+          'name': 'message'
+          }
+      ), 
+      required=True
+    )
+
+    email = forms.CharField(
+      label="メールアドレス",
+      max_length=100,
+      widget=forms.TextInput(
+        attrs={
+          'class':"form-control reset-border-radius email",
+          "placeholder":"メールアドレス", 
+          "name":"email"
+        }
+      )
+    )
     
     # メール送信処理
     def send_email(self):
@@ -14,5 +49,3 @@ class ContactForm(forms.Form):
         message = self.cleaned_data['message']
         from_email = settings.EMAIL_HOST_USER
         to = [settings.EMAIL_HOST_USER]
-
-        send_mail(subject, message, from_email, to)
